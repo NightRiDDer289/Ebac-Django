@@ -6,4 +6,5 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.PostView.as_view(), name='home'),
+    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 ]
